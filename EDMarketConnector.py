@@ -157,7 +157,7 @@ class AppWindow:
                 bpc.export(data, False)
 
             if config.read('output') & config.OUT_EDDN:
-                eddn.export(data, self.setstatus)
+                eddn.export(data)
 
         except companion.VerificationRequired:
             return prefs.AuthenticationDialog(self.w, self.verify)
